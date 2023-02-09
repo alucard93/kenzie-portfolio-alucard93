@@ -1,15 +1,15 @@
 // Styles
-import { Container } from "@/styles/Global";
-import { Text } from "@/styles/Text";
-import { Button } from "@/styles/Buttons";
+import { Container } from '@/styles/Global'
+import { Text } from '@/styles/Text'
+import { Button } from '@/styles/Buttons'
 
 // Components
-import { Stack } from "@/components/Stack";
-import { Project } from "@/components/Project";
+import { Stack } from '@/components/Stack'
+import { Project } from '@/components/Project'
 
 // Data
-import { stackData } from "@/utils/stackData";
-import { userData } from "@/utils/userData";
+import { stackData } from '@/utils/stackData'
+import { userData } from '@/utils/userData'
 
 // Page Style
 import {
@@ -22,8 +22,8 @@ import {
   ProjectsAreaSocialMediaMessage,
   ProjectsAreaContent,
   ProjectAreaWrapperColumns,
-} from "./style";
-
+  AboutMe,
+} from './style'
 
 export const Home = (): JSX.Element => {
   return (
@@ -32,7 +32,7 @@ export const Home = (): JSX.Element => {
         <Container>
           <HeaderContent>
             <Text as="h1" type="heading1" color="grey5">
-              Criando experiências por meio da tecnologia{" "}
+              Criando experiências por meio da tecnologia{' '}
             </Text>
             <Text type="body1" color="grey6">
               Sou estudante de programação na Kenzie Academy Brasil, participei
@@ -45,6 +45,9 @@ export const Home = (): JSX.Element => {
               </Button>
               <Button as="a" href="#tecnologias" type="btLink" color="grey5">
                 Tecnologias
+              </Button>
+              <Button as="a" href="#sobremim" type="btLink" color="grey5">
+                Sobre mim
               </Button>
             </HeaderButtonsArea>
           </HeaderContent>
@@ -84,14 +87,14 @@ export const Home = (): JSX.Element => {
               </Button>
             </ProjectsAreaSocialMediaMessage>
             <ProjectsAreaContent>
-              <Text type="body1" color="grey2" css={{ marginBottom: "$2" }}>
+              <Text type="body1" color="grey2" css={{ marginBottom: '$2' }}>
                 Projetos
               </Text>
               <Text as="h3" type="heading2" color="grey1">
-                Originalidade e{" "}
+                Originalidade e{' '}
                 <Text as="span" color="brand1" type="heading2">
                   dedicação
-                </Text>{" "}
+                </Text>{' '}
                 em cada detalhe
               </Text>
               <Project />
@@ -99,6 +102,35 @@ export const Home = (): JSX.Element => {
           </ProjectAreaWrapperColumns>
         </Container>
       </ProjectsArea>
+      <AboutMe id="sobremim">
+        <Container>
+          <Text as="h3" type="heading2" color="grey1">
+            Um pouco sobre mim ...
+          </Text>
+          <br/>
+          <Text type="body1" color="grey2">
+            <p>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Olá, me chamo Marcus
+              Vinicius e tenho 29 anos. Recentemente fiz uma transição de
+              carreira de engenharia civil para programação, uma área que sempre
+              me despertou curiosidade que me identifico e que me traz
+              satisfação pessoal e profissional.  Meus
+              projetos relevantes podem ser encontrados em meu perfil no GitHub:
+              <strong> https://github.com/alucard93</strong>. Para entrar em contato, você pode me
+              enviar um email: <strong>m.vinicius93@yahoo.com.br</strong>
+            </p>
+            <br/>
+            <p>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              Atualmente, estou me
+              especializando em desenvolvimento FullStack pela Kenzie Academy
+              Brasil e Estácio de Sá, com o objetivo de trabalhar como FullStack
+              Developer. Sou formado em Front-end e estou estudando Back-end.
+              
+            </p>
+          </Text>
+        </Container>
+      </AboutMe>
     </main>
-  );
-};
+  )
+}
